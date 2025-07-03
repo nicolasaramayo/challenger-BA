@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-content-section',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, RouterLink],
   templateUrl: './content-section.component.html',
   styleUrl: './content-section.component.scss'
 })
@@ -25,7 +26,7 @@ export class ContentSectionComponent {
       altText: 'Integración API',
       badges: ['API', 'USIG'],
       title: 'Búsqueda de Direcciones',
-      titleLink: '#',
+      titleLink: '/buscar-calles',
       description: 'Integración con la API USIG para búsqueda inteligente de direcciones de Buenos Aires.',
       publishDate: 'Noviembre 2024'
     },

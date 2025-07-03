@@ -1,0 +1,88 @@
+// Estilos de Obelisco v2 para el buscador
+.search-container {
+  position: relative;
+  
+  .input-search[type=search] {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'><path d='M15.9765 14.4716H15.1865L14.9065 14.2016C16.1065 12.8016 16.7265 10.8916 16.3865 8.86157C15.9165 6.08157 13.5965 3.86157 10.7965 3.52157C6.56646 3.00157 3.00646 6.56157 3.52646 10.7916C3.86646 13.5916 6.08646 15.9116 8.86646 16.3816C10.8965 16.7216 12.8065 16.1016 14.2065 14.9016L14.4765 15.1816V15.9716L18.7265 20.2216C19.1365 20.6316 19.8065 20.6316 20.2165 20.2216C20.6265 19.8116 20.6265 19.1416 20.2165 18.7316L15.9765 14.4716ZM9.97646 14.4716C7.48646 14.4716 5.47646 12.4616 5.47646 9.97157C5.47646 7.48157 7.48646 5.47157 9.97646 5.47157C12.4665 5.47157 14.4765 7.48157 14.4765 9.97157C14.4765 12.4616 12.4665 14.4716 9.97646 14.4716Z' fill='%235C6A7A'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center left 1rem;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+    box-sizing: border-box;
+  }
+  
+  .input-search.input-search-with-button[type=search] {
+    background-image: none;
+    padding-left: 1rem;
+    padding-right: 5.5rem;
+  }
+  
+  .btn-search-clear {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    border: none !important;
+    background: transparent !important;
+    padding: 0.25rem;
+    height: auto;
+    
+    .o-icon {
+      font-size: 1.25rem;
+      color: #6c757d;
+    }
+    
+    &:hover .o-icon {
+      color: #dc3545;
+    }
+    
+    &:focus {
+      outline: 2px solid #ffcc00 !important;
+      outline-offset: 2px !important;
+      border-radius: 4px !important;
+    }
+  }
+}
+
+// Estilos adicionales para mejorar la experiencia
+.form-control.input-search {
+  background-color: #ffffff;
+  padding: 0.75rem 1rem;
+  color: #101e37;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  border-radius: 0.5rem;
+  outline: 0.125rem solid #101e37;
+  outline-offset: 0;
+  box-sizing: border-box;
+  
+  &:focus {
+    outline-color: #007bff;
+    box-shadow: 0 0 0 0.125rem rgba(0, 123, 255, 0.25);
+  }
+  
+  &::placeholder {
+    color: #6c757d;
+    opacity: 1;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .search-container {
+    .input-search[type=search] {
+      padding-left: 2.5rem;
+      background-position: center left 0.75rem;
+    }
+    
+    .input-search.input-search-with-button[type=search] {
+      padding-right: 4rem;
+    }
+    
+    .btn-search-clear {
+      right: 0.5rem;
+    }
+  }
+}

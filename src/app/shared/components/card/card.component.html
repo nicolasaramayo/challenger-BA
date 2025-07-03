@@ -16,14 +16,25 @@
     </div>
     <h3 class="card-title">
       <a 
-        *ngIf="titleLink; else titleWithoutLink" 
-        [href]="titleLink" 
+        *ngIf="titleLink && isInternalLink(titleLink); else externalOrNoLink" 
+        [routerLink]="titleLink" 
         class="card-title-link"
       >
         {{ title }}
       </a>
-      <ng-template #titleWithoutLink>
-        {{ title }}
+      <ng-template #externalOrNoLink>
+        <a 
+          *ngIf="titleLink && isExternalLink(titleLink); else noLink" 
+          [href]="titleLink" 
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-title-link"
+        >
+          {{ title }}
+        </a>
+        <ng-template #noLink>
+          {{ title }}
+        </ng-template>
       </ng-template>
     </h3>
     <p class="card-text">{{ description }}</p>

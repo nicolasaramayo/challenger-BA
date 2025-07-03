@@ -1,0 +1,154 @@
+<div class="street-search-page">
+  <!-- Header -->
+  <app-header></app-header>
+  
+  <!-- MAIN CONTENT: Elemento requerido para accesibilidad (skip to content) -->
+  <main id="main" class="py-5">
+    <div class="container-xl">
+      
+      <!-- Page Header -->
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h1 class="display-5 fw-bold text-dark mb-3">Búsqueda de Calles</h1>
+          <p class="lead text-muted">
+            Encontrá direcciones de la Ciudad Autónoma de Buenos Aires
+          </p>
+        </div>
+      </div>
+      
+      <!-- Search Form -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <form (ngSubmit)="$event.preventDefault()">
+                <div class="mb-3">
+                  <label for="streetSearch" class="form-label fw-semibold">
+                    Ingresá una calle o dirección
+                  </label>
+                  <div class="search-container">
+                    <input 
+                      type="search" 
+                      class="form-control input-search input-search-with-button" 
+                      id="streetSearch"
+                      [(ngModel)]="searchTerm"
+                      (input)="onInputChange($event)"
+                      placeholder="Ejemplo: Av. Corrientes, Florida 123, etc."
+                      name="streetSearch">
+                    @if (searchTerm) {
+                      <button 
+                        class="btn btn-outline-secondary btn-search-clear" 
+                        type="button" 
+                        (click)="clearSearch()"
+                        aria-label="Limpiar búsqueda">
+                        <i class="material-symbols-rounded o-icon" aria-hidden="true">clear</i>
+                      </button>
+                    }
+                  </div>
+                  <div class="form-text">
+                    Ingresá al menos 3 caracteres para comenzar la búsqueda
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Loading State -->
+      @if (isLoading) {
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center py-4">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Buscando...</span>
+              </div>
+              <p class="text-muted mt-2">Buscando calles...</p>
+            </div>
+          </div>
+        </div>
+      }
+      
+      <!-- Error State -->
+      @if (hasError) {
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="alert alert-danger" role="alert">
+              <i class="material-symbols-rounded o-icon me-2" aria-hidden="true">error</i>
+              <strong>Error:</strong> {{ errorMessage }}
+            </div>
+          </div>
+        </div>
+      }
+      
+      <!-- Results -->
+      @if (!isLoading && !hasError && streets.length > 0) {
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-primary text-white">
+                <h5 class="mb-0 d-flex align-items-center">
+                  <i class="material-symbols-rounded o-icon me-2" aria-hidden="true">location_on</i>
+                  Resultados encontrados ({{ streets.length }})
+                </h5>
+              </div>
+              <div class="card-body p-0">
+                <ul class="list-group list-group-flush">
+                  @for (street of streets; track street.nombre) {
+                    <li class="list-group-item d-flex w-100 justify-content-between align-items-center p-3">
+                      <div>
+                        <h6 class="mb-1 text-dark">{{ street.nombre }}</h6>
+                        <p class="mb-0 text-muted">{{ street.direccion }}</p>
+                      </div>
+                      <i class="material-symbols-rounded o-icon text-primary" aria-hidden="true">arrow_forward</i>
+                    </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+      
+      <!-- Empty State -->
+      @if (!isLoading && !hasError && searchTerm.length >= 3 && streets.length === 0) {
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center py-5">
+              <i class="material-symbols-rounded o-icon display-1 text-muted mb-3" aria-hidden="true">search_off</i>
+              <h4 class="text-muted">No se encontraron resultados</h4>
+              <p class="text-muted">
+                Intentá con otra búsqueda o verificá la ortografía
+              </p>
+            </div>
+          </div>
+        </div>
+      }
+      
+      <!-- Initial State -->
+      @if (!searchTerm && streets.length === 0 && !isLoading) {
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center py-5">
+              <i class="material-symbols-rounded o-icon display-1 text-primary mb-3" aria-hidden="true">map</i>
+              <h4 class="text-dark">¿Buscás una dirección?</h4>
+              <p class="text-muted mb-4">
+                Utilizamos el servicio de normalización de direcciones de USIG 
+                para encontrar las calles de la Ciudad de Buenos Aires
+              </p>
+              <div class="alert alert-info" role="alert">
+                <i class="material-symbols-rounded o-icon me-2" aria-hidden="true">info</i>
+                <strong>Ejemplo de búsquedas:</strong> 
+                "Av. Corrientes", "Florida 123", "Palermo", etc.
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+      
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <app-footer></app-footer>
+</div>

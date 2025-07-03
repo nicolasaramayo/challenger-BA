@@ -1,5 +1,3 @@
- 
-
 <div class="header-banner">
     <img
     class="header-banner-img"
@@ -14,7 +12,7 @@
     Saltar al contenido principal
     </a>
     <div class="container header-container">
-    <a href="https://www.estadisticaciudad.gob.ar/eyc/" class="navbar-brand">
+    <a routerLink="/" class="navbar-brand">
               <!-- Logo para desktop -->
       <img class="d-none d-xl-block" src="https://gcba.github.io/Obelisco-V2/images/logo_ba.svg" alt="Gobierno de la Ciudad de Buenos Aires - Inicio" />
       <!-- Logo para mobile -->
@@ -41,50 +39,16 @@
         <div class="navbar-content">
         <div class="navbar-sections">
             <nav>
-            <p class="navbar-sections-title">Secciones</p>
+            <p class="navbar-sections-title">Navegación</p>
             <ul class="nav nav-pills nav-sections">
-                <li class="dropdown">
-                <button
-                    type="button"
-                    class="btn btn-dropdown btn-lg"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                >
-                    <span class="btn-dropdown-text ellipsis-1">Navegación</span>
-                    <span class="material-symbols-rounded btn-dropdown-icon o-icon" aria-label="hidden">
-                    expand_more
-                    </span>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item item-link">
-                    <span class="item-text">Ver más</span>
-                    <span class="material-symbols-rounded o-icon" aria-hidden="true">
-                        arrow_forward
-                    </span>
-                    </a>
-                </div>
+                <li class="nav-item">
+                <a routerLink="/" class="nav-link nav-link-lg">
+                    <span>Inicio</span>
+                </a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link nav-link-lg">
-                    <span>Navegación</span>
+                <a routerLink="/buscar-calles" class="nav-link nav-link-lg">
+                    <span>Búsqueda de Calles</span>
                 </a>
                 </li>
                 <li class="dropdown">
@@ -94,35 +58,20 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-                    <span class="btn-dropdown-text ellipsis-1">Navegación</span>
+                    <span class="btn-dropdown-text ellipsis-1">Challenge Técnico</span>
                     <span class="material-symbols-rounded btn-dropdown-icon o-icon" aria-label="hidden">
                     expand_more
                     </span>
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
+                    <a routerLink="/" class="dropdown-item">
+                    <span class="item-text">Landing Page</span>
                     </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
+                    <a routerLink="/buscar-calles" class="dropdown-item">
+                    <span class="item-text">API USIG</span>
                     </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item">
-                    <span class="item-text">Enlace de navegación</span>
-                    </a>
-                    <a class="dropdown-item item-link">
-                    <span class="item-text">Ver más</span>
-                    <span class="material-symbols-rounded o-icon" aria-hidden="true">
-                        arrow_forward
-                    </span>
+                    <a href="https://github.com" target="_blank" class="dropdown-item">
+                    <span class="item-text">Repositorio GitHub</span>
                     </a>
                 </div>
                 </li>
@@ -139,7 +88,7 @@
                 type="search"
                 class="form-control input-search input-search-with-button"
                 id="header-search"
-                placeholder="Buscador"
+                placeholder="Buscar direcciones..."
                 />
                 <button class="reset" type="reset" aria-label="Borrar"></button>
                 <button class="button-search" type="submit" aria-label="Buscar"></button>
