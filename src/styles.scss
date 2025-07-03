@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importar Bootstrap (requerido por Obelisco V2) */
+@import "bootstrap/scss/bootstrap";
+
+/* Importar estilos de Obelisco V2 */
+@import "@gcba/obelisco-v2/dist/styles.css";
+
+/* Estilos globales adicionales */
+.main-content {
+  padding-top: 2rem;
+  min-height: 80vh;
+}
