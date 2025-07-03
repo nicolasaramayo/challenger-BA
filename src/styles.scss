@@ -6,6 +6,8 @@
 /* Importar estilos de Obelisco V2 */
 @import "@gcba/obelisco-v2/dist/styles.css";
 
+
+
 /* Estilos globales adicionales */
 .main-content {
   padding-top: 2rem;
@@ -38,11 +40,4 @@
   border: 0;
 }
 
-/* Asegurar que los iconos de Material Symbols se vean correctamente */
-.material-symbols-rounded.o-icon {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-}
+
