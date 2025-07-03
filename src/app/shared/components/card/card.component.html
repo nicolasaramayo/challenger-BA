@@ -1,0 +1,38 @@
+<div class="card">
+  <img 
+    *ngIf="cardImg" 
+    class="card-img" 
+    [src]="cardImg" 
+    [alt]="altText || 'Imagen de la tarjeta'" 
+  />
+  <div class="card-body">
+    <div class="card-badges" *ngIf="badges && badges.length > 0">
+      <span 
+        *ngFor="let badge of badges" 
+        class="badge badge-default"
+      >
+        {{ badge }}
+      </span>
+    </div>
+    <h3 class="card-title">
+      <a 
+        *ngIf="titleLink; else titleWithoutLink" 
+        [href]="titleLink" 
+        class="card-title-link"
+      >
+        {{ title }}
+      </a>
+      <ng-template #titleWithoutLink>
+        {{ title }}
+      </ng-template>
+    </h3>
+    <p class="card-text">{{ description }}</p>
+    <div class="card-info" *ngIf="publishDate">
+      <div>
+        <small>
+          <span>{{ publishDate }}</span>
+        </small>
+      </div>
+    </div>
+  </div>
+</div> 

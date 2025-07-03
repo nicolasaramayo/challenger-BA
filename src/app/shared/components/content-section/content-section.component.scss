@@ -1,0 +1,38 @@
+// Estilos para la sección de contenido
+.projects-section {
+  .card {
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+    &:hover {
+      border-color: var(--bs-primary);
+    }
+  }
+}
+
+.tech-item {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  
+  &:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+    transform: translateY(-2px);
+  }
+}
+
+// Asegurar espaciado consistente
+.development-process {
+  .steps-section {
+    padding: 0;
+  }
+}
+
+.technologies-section {
+  .tech-item {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+} 
