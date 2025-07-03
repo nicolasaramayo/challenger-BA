@@ -1,0 +1,118 @@
+// Estilos específicos del componente hero
+// Los estilos principales vienen de Obelisco V2 y Bootstrap 5
+
+.hero-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  
+  @media (min-width: 992px) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .hero-content {
+    h1 {
+      font-weight: 700;
+      color: var(--bs-dark);
+      
+      .text-primary {
+        background: linear-gradient(45deg, #0074ba, #2e7bff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    
+    .lead {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--bs-gray-700);
+    }
+  }
+  
+  .hero-visual {
+    .block {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+.features-section {
+  .block {
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    background: #ffffff;
+    
+    &:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    
+    .block-body {
+      .material-symbols-rounded {
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover .material-symbols-rounded {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+// Utilities específicas
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+// Animaciones adicionales
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content,
+.hero-visual {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-visual {
+  animation-delay: 0.2s;
+}
+
+// Responsive adjustments
+@media (max-width: 991.98px) {
+  .hero-section {
+    .hero-content {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+// Accesibilidad mejorada
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .hero-visual,
+  .block {
+    animation: none;
+    transition: none;
+  }
+} 
