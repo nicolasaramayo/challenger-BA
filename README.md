@@ -1,8 +1,8 @@
 # 🏙️ Challenger BA - Landing Page
 
-> Challenge técnico desarrollado con **Angular 18** y **Obelisco V2** (Sistema de Diseño del GCBA)
+> Challenge técnico desarrollado con **Angular** y **Obelisco V2** (Sistema de Diseño del GCBA)
 
-## 📋 Descripción del Proyecto
+##  Descripción del Proyecto
 
 Landing page responsiva desarrollada como parte de un ejercicio técnico que implementa:
 - **Framework**: Angular 18 con componentes standalone
@@ -10,14 +10,6 @@ Landing page responsiva desarrollada como parte de un ejercicio técnico que imp
 - **Estilos**: Bootstrap 5 + SCSS
 - **Estructura**: Componentes reutilizables en carpeta `shared/`
 
-## ✅ Estado Actual del Desarrollo
-
-### 🎯 **Completado:**
-- ✅ **Configuración base**: Proyecto Angular con Obelisco V2
-- ✅ **Header completo**: Navegación con dropdowns funcionales
-- ✅ **Responsive design**: Adaptable a desktop, tablet y móvil
-- ✅ **Componentes Obelisco V2**: Header con banner del GCBA
-- ✅ **Accesibilidad**: Navegación por teclado y ARIA labels
 
 ### 🔄 **En desarrollo:**
 - 🔨 **Hero Section**: Sección de presentación principal
@@ -44,7 +36,7 @@ Landing page responsiva desarrollada como parte de un ejercicio técnico que imp
 ### Instalación
 ```bash
 # Clonar el repositorio
-git clone [URL-DEL-REPO]
+git clone https://github.com/nicolasaramayo/challenger-BA.git
 cd challenger-BA/challenger-landing
 
 # Instalar dependencias
@@ -57,10 +49,6 @@ ng serve
 http://localhost:4200
 ```
 
-### Build de producción
-```bash
-ng build --configuration=production
-```
 
 ## 📁 Estructura del Proyecto
 
@@ -80,19 +68,11 @@ challenger-landing/
 └── package.json                    # Dependencias
 ```
 
-## 🎨 Componentes Implementados
 
-### Header (Encabezado)
-- **Banner del GCBA**: Imagen y texto institucional
-- **Logo responsivo**: Adaptable según dispositivo
-- **Navegación principal**: Dropdowns funcionales
-- **Buscador**: Campo de búsqueda integrado
-- **Botón de ingreso**: Acceso a usuario
-- **Menú móvil**: Hamburger menu para dispositivos pequeños
 
 ## 🎯 Requisitos del Challenge
 
-### ✅ Maquetación Web
+### Maquetación Web
 - [x] Proyecto Angular creado
 - [x] Componentes en carpeta `shared/`
 - [x] Header con navegación funcional
@@ -102,39 +82,25 @@ challenger-landing/
 - [ ] Sección de contenido con componentes shared
 - [ ] Footer
 
-### 🔄 Ejercicio JavaScript (Próximo)
+### Ejercicio JavaScript (Próximo)
 - [ ] Página de búsqueda de calles
 - [ ] Integración con API USIG Buenos Aires
 - [ ] Autocompletado de direcciones
 
-### ✅ Git y Documentación
+###  Git y Documentación
 - [x] Repositorio GitHub
 - [x] README.md completo
 - [x] Estructura de ramas planificada
 
-## 🌿 Estrategia de Ramas
 
-```
-main                    # Código estable y funcional
-├── feature/hero        # Sección hero/presentación
-├── feature/components  # Componentes shared (botones, cards)
-├── feature/footer      # Pie de página
-└── feature/street-api  # Buscador de calles con API
-```
+## 👨‍💻 Desarrollado por
+NICOLAS FABIAN ARAMAYO
 
-## 👨‍💻 Desarrollador
 
-**Challenge técnico** desarrollado siguiendo las mejores prácticas de:
-- Git Flow
-- Componentes reutilizables
-- Responsive design
-- Accesibilidad web
-- Documentación profesional
-
-## 📞 API Utilizada
+## API Utilizada
 
 - **USIG Buenos Aires**: `http://servicios.usig.buenosaires.gob.ar/normalizar/`
-- **Propósito**: Normalización y sugerencias de direcciones de CABA
+
 
 ---
 
