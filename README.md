@@ -1,4 +1,4 @@
-# 🏙️ Challenger BA - Landing Page
+# Challenger Técnico BA - Landing Page
 
 > Challenge técnico desarrollado con **Angular** y **Obelisco V2** (Sistema de Diseño del GCBA)
 
@@ -11,13 +11,7 @@ Landing page responsiva desarrollada como parte de un ejercicio técnico que imp
 - **Estructura**: Componentes reutilizables en carpeta `shared/`
 
 
-### 🔄 **En desarrollo:**
-- 🔨 **Hero Section**: Sección de presentación principal
-- 🔨 **Componentes shared**: Botones, cards reutilizables
-- 🔨 **Footer**: Pie de página con Obelisco V2
-- 🔨 **Buscador de calles**: Integración con API USIG
-
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Angular 18**: Framework principal
 - **Obelisco V2**: Sistema de diseño del GCBA
@@ -26,7 +20,7 @@ Landing page responsiva desarrollada como parte de un ejercicio técnico que imp
 - **TypeScript**: Lenguaje principal
 - **Material Symbols**: Iconografía oficial
 
-## 🚀 Instalación y Uso
+## Instalación y Uso
 
 ### Prerrequisitos
 - Node.js (versión 18 o superior)
@@ -50,7 +44,7 @@ http://localhost:4200
 ```
 
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 challenger-landing/
@@ -68,29 +62,6 @@ challenger-landing/
 └── package.json                    # Dependencias
 ```
 
-
-
-## 🎯 Requisitos del Challenge
-
-### Maquetación Web
-- [x] Proyecto Angular creado
-- [x] Componentes en carpeta `shared/`
-- [x] Header con navegación funcional
-- [x] Responsive design implementado
-- [x] Obelisco V2 integrado correctamente
-- [ ] Hero section (en desarrollo)
-- [ ] Sección de contenido con componentes shared
-- [ ] Footer
-
-### Ejercicio JavaScript (Próximo)
-- [ ] Página de búsqueda de calles
-- [ ] Integración con API USIG Buenos Aires
-- [ ] Autocompletado de direcciones
-
-###  Git y Documentación
-- [x] Repositorio GitHub
-- [x] README.md completo
-- [x] Estructura de ramas planificada
 
 
 ## 👨‍💻 Desarrollado por
